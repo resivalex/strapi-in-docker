@@ -2,6 +2,7 @@ version: "3.3"
 services:
   strapi:
     image: strapi/strapi
+    restart: always
     environment:
       DATABASE_CLIENT: postgres
       DATABASE_NAME: strapi
@@ -17,6 +18,7 @@ services:
       - 1337:1337
   postgres:
     image: postgres
+    restart: always
     environment:
       POSTGRES_USER: strapi
       POSTGRES_PASSWORD: strapi
